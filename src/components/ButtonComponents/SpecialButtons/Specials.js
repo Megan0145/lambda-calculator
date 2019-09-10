@@ -17,7 +17,7 @@ const [specialState, setSpecialState] = useState(specials);
        it any props needed by the child component*/}
               {
          specials.map(special => (
-           <SpecialButton special={special} />
+           <SpecialButton key={special} special={special} />
          ))
        }
     </div>
