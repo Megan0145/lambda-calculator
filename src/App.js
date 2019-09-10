@@ -27,10 +27,10 @@ function App() {
 
 const clearDisplay = () => {
   setDisplay('');
- }
+}
 
-const evaluate = () => {
-  setDisplay('');
+const evaluateDisplay = () => {
+  setDisplay(eval(currentDisplay));
 }
 
    return (
@@ -41,11 +41,11 @@ const evaluate = () => {
         <Display currentDisplay={currentDisplay} />
         <div className="buttons">
           <div className="buttons-left"> 
-            <Specials clearDisplay= {clearDisplay} />
+            <Specials clearDisplay= {clearDisplay} updateDisplay={updateDisplay}/>
             <Numbers updateDisplay={updateDisplay} />
             </div>
             <div className="buttons-right">
-            <Operators updateDisplay={updateDisplay} />
+            <Operators updateDisplay={updateDisplay} evaluateDisplay={evaluateDisplay} />
             </div>
         </div>
       </div>

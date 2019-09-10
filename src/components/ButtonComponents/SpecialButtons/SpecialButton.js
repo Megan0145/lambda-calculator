@@ -11,7 +11,9 @@ const SpecialButton = (props) => {
         evt => {
         if(special==='C'){
           props.clearDisplay();
-          } 
+          } else {
+            props.updateDisplay(special);
+          }
       } 
       }
       >
