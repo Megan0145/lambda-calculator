@@ -20,3 +20,9 @@
     padding-right: 8%;
     font-size: 5.0rem;
   }
+.numbers {
+    margin-left: 70px;
+}
+.numbers .num-btn {
+    width: 100px;
+}
