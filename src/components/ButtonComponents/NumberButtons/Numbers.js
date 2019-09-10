@@ -1,17 +1,15 @@
 import React, {useState} from "react";
 import { numbers } from '../../../data';
 import NumberButton from './NumberButton';
+import Display from '../../DisplayComponents/Display';
 
 //import any components needed
 
 //Import your array data to from the provided data file
 
-const Numbers = () => {
+const Numbers = (props) => {
   // STEP 2 - add the imported data to state
 const [numberState, setNumberState] = useState(0);
-const updateDisplay = (number) => {
-
-}
 
   return (
     <div className='numbers'>
@@ -20,7 +18,7 @@ const updateDisplay = (number) => {
        it any props needed by the child component*/}
        {
          numbers.map(number => (
-           <NumberButton key={number} number={number} id={number} updateDisplay={updateDisplay} />
+           <NumberButton key={number} number={number} id={number} updateDisplay={props.updateDisplay} />
          ))
        }
     </div>
