@@ -30,7 +30,7 @@ const clearDisplay = () => {
 }
 
 const evaluateDisplay = () => {
-  setDisplay(eval(currentDisplay));
+  setDisplay(eval(currentDisplay).toFixed(2));
 }
 
    return (
