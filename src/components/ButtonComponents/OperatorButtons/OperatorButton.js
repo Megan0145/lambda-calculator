@@ -11,7 +11,7 @@ const OperatorButton = (props) => {
       <button className='operator-btn' onClick={evt => {
         if(operator === '='){
           evaluateDisplay();
-        }  else{
+        }  else {
           updateDisplay(operator);
         }
       }

@@ -23,15 +23,14 @@ function App() {
     setDisplay('');
     setDisplay(currentDisplay + value);
   }
-  // console.log(currentDisplay);
 
-const clearDisplay = () => {
-  setDisplay('');
-}
+  const clearDisplay = () => {
+    setDisplay('');
+  }
 
-const evaluateDisplay = () => {
-  setDisplay(eval(currentDisplay).toFixed(2));
-}
+  const evaluateDisplay = () => {
+    setDisplay(eval(currentDisplay).toFixed(2));
+  }
 
    return (
     <div className="container">
@@ -41,11 +40,19 @@ const evaluateDisplay = () => {
         <Display currentDisplay={currentDisplay} />
         <div className="buttons">
           <div className="buttons-left"> 
-            <Specials clearDisplay= {clearDisplay} updateDisplay={updateDisplay}/>
-            <Numbers updateDisplay={updateDisplay} />
+            <Specials 
+              clearDisplay= {clearDisplay} 
+              updateDisplay={updateDisplay}
+            />
+            <Numbers 
+              updateDisplay={updateDisplay} 
+            />
             </div>
             <div className="buttons-right">
-            <Operators updateDisplay={updateDisplay} evaluateDisplay={evaluateDisplay} />
+            <Operators 
+              updateDisplay={updateDisplay} 
+              evaluateDisplay={evaluateDisplay} 
+            />
             </div>
         </div>
       </div>

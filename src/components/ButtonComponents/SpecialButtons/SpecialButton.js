@@ -14,7 +14,7 @@ const SpecialButton = (props) => {
           } else {
             props.updateDisplay(special);
           }
-      } 
+        } 
       }
       >
       {special}
